@@ -1,19 +1,53 @@
+
 <!DOCTYPE html>
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>Index页</title>
+    <link rel="stylesheet" href="js/css/editormd.preview.css" />
+    <title>主页</title>
 </head>
-<html>
 <body>
-<h1>你干嘛，哈哈哎呦！</h1>
-<h3>INDEX PAGE 该页面未设置内容</h3>
-<h5>试着访问:</h5>
-  <a href="https://woshimaniubi8.github.io/18age_videos/">/18age_videos/index.html</a>
-  <div>
-    <a href="https://woshimaniubi8.github.io/README.md">/README.md 自述文件</a>
-      <div>
-          <a href="https://woshimaniubi8.github.io/wechat_pay.html">/wechat_pay.html 打赏作者awa(虽然烂的一批)</a> 
-              <div>
-                  <a href="https://woshimaniubi8.github.io/cxk-ball/">/cxk-ball/index.html 蔡徐坤打篮球</a>
-  </body>
+    
+<div id="test-markdown-view">
+    <!-- Server-side output Markdown text -->
+    <textarea style="display:none;"># 主页面
+~~你干嘛，哈哈哎呦！~~
+##### HOMO PAGE
+
+------------
+
+###### *这里什么也没有，仅仅只是索引页*
+------------
+
+```python
+print("Tips:单击链接来跳转！")
+```
+**试着访问:**
+-  [好康的18agevideo](https://woshisb.eu.org/18age_videos/ "好康的18agevideo")
+- [CXK打篮球游戏](https://woshisb.eu.org/cxk-ball/ "CXK打篮球游戏")
+- [Markdown编辑器](/md.html "Markdown编辑器")
+- ~~[Dev文档(开发中)](https://woshisb.eu.org/ "Dev文档(开发中)")~~
+- ~~[捐助](https://woshisb.eu.org/wechat_pay.html "捐助")~~
+
+
+######Last edited :2023-07-12 20:11:48
+------------
+by @woshimaniubi8 &copy;2023
+
+</textarea>             
+</div>
+<script src="jquery.min.js"></script>
+<script src="js/editormd.js"></script>
+<script src="js/lib/marked.min.js"></script>
+<script src="js/lib/prettify.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+	    var testView = editormd.markdownToHTML("test-markdown-view", {
+            // markdown : "[TOC]\n### Hello world!\n## Heading 2", // Also, you can dynamic set Markdown text
+            // htmlDecode : true,  // Enable / disable HTML tag encode.
+            // htmlDecode : "style,script,iframe",  // Note: If enabled, you should filter some dangerous HTML tags for website security.
+        });
+    });
+</script>
+</body>
 </html>
