@@ -1,0 +1,147 @@
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="js/css/editormd.preview.css" />
+    <title>主页</title>
+</head>
+<body>
+    
+<div id="test-markdown-view">
+    <!-- Server-side output Markdown text -->
+    <textarea style="display:none;"># 使用文档
+#### ESP-12x OLED开发板
+###### 更新时间：2023-07-13 21:53:31
+------------
+
+## 1.配件
+#### 需要根据下表自行准备并焊接相关配件
+| 名称 | 位号 | 封装 | 数量 | 价格 |
+| :---- | :---- | :---- | :---- | :---- |
+| 8P 2.54排针 | H1,H2 | HDR-TH_8P-P2.54-V  | 2 | 0.443 |
+| ESP-12x |  U1 | WIFIM-SMD_ESP-12F-ESP8266MOD  | 1  |  13.28 |
+| 4P SMT按键  |  U2,U3 | KEY-SMD_4P-L6.0-W6.0-P4.50-LS9.0  | 2  |  ？ |
+|  0.96”128*64 IIC OLED模块 | U5  | 0.96_I2C_OLED_SSD1306 NO HOLES  | 1  |  ？ |
+**以上数据来自嘉立创BOM配单*
+
+------------
+## 2.打板
+#### 并不提供成品PCB,请联系厂家进行打板
+
+------------
+
+
+###### **下载：**
+[PCB文件](https://awaawa.lanzoul.com/iM7Ut12buhtg "PCB文件")
+
+
+[源代码](https://awaawa.lanzoul.com/i8USX12c211a "源代码")
+
+------------
+
+
+##### *可以参考以下打板选项*
+| 名称  | 选项  |
+| :------------ | :------------ |
+| 板材类别  | FR-4  |
+| 板子尺寸  | 489mm×517mm  |
+|  板子层数 |  4 |
+| 焊盘喷镀  |  有铅锡 |
+| 板子厚度  | 1.6mm  |
+| 是否SMT贴片  |  否 |
+| 是否开钢网  | 否  |
+**成品示例图：**
+
+未安装零件：
+
+正面：
+[![](https://woshisb.eu.org/Sources/pcb5.PNG)](https://woshisb.eu.org/Sources/pcb5.PNG)
+背面：
+[![](https://woshisb.eu.org/Sources/pcb6.PNG)](https://woshisb.eu.org/Sources/pcb6.PNG)
+已安装零件：
+[![](https://woshisb.eu.org/Sources/pcb2.PNG)](https://woshisb.eu.org/Sources/pcb2.PNG)
+原理图：
+[![](https://woshisb.eu.org/Sources/pcb1.PNG)](https://woshisb.eu.org/Sources/pcb1.PNG)
+PCB:
+[![](https://woshisb.eu.org/Sources/pcb.PNG)](https://woshisb.eu.org/Sources/pcb.PNG)
+*原理图和PCB并不是最新的，请以实际为准！
+
+## 3.使用
+#### 在做完准备工作后，即可开始使用了，不过需要先给ESP8266烧录程序！
+------------
+**烧录准备：**
+
+| 名称 | 数量 |
+| :---- | :---- |
+| USB to TTL下载器| 1 |
+| 杜邦线 | 4 |
+| 开发板 | 1 |
+| *人类 | 11.4514|
+
+注*表示可选
+
+##Step1:##
+
+######使用杜邦线连接 开发板 和 USBtoTTL下载器
+*按照下表进行连接*
+
+
+| 开发板引脚 | 下载器引脚 |
+| :----| :---- |
+| VCC | VCC |
+| GND | GND |
+| TXD | RXD |
+| RXD | TXD |
+
+在连接好后，按住开发板下方标有的 **FLASH** 按键（也可以在上电后按住，然后再按一下 **RST** 按键）
+按住的同时，把下载器插入电脑的USB端口，并确保驱动已经安装！
+
+##Step2:
+#####开始烧录
+------------
+**在确定准备好后，即可开始烧录**
+
+可以打开 **Arduino** 等编程软件自己写代码
+也可以打开 **官方烧录程序** 或第三方烧录程序进行烧录二进制(*.bin)文件
+
+##Step3:
+#####烧录完成
+烧录完成后，按下开发板的**复位**（RST）按键
+
+如果需要用到开发板上的OLED显示屏(IIC)接口，请参考下表IO口
+
+| OLED引脚 | 模块引脚 |
+| :---- | : ---- |
+| GND | GND |
+| VCC | VCC |
+| SCL | IO5 |
+| SDA | IO4 |
+
+在购买显示屏模块时，请注意 **线序** 和 **大小** !
+
+
+------------
+
+
+
+   by @woshimaniubi8 &copy;2023
+
+</textarea>     
+</div>
+<script src="jquery.min.js"></script>
+<script src="js/editormd.js"></script>
+<script src="js/lib/marked.min.js"></script>
+<script src="js/lib/prettify.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+	    var testView = editormd.markdownToHTML("test-markdown-view", {
+    // markdown : "[TOC]\n### Hello world!\n## Heading 2", // Also, you can dynamic set Markdown text
+    // htmlDecode : true,  // Enable / disable HTML tag encode.
+    // htmlDecode : "style,script,iframe",  // Note: If enabled, you should filter some dangerous HTML tags for website security.
+});
+    });
+</script>
+</body>
+</html>
