@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://woshisb.eu.org/js/css/editormd.preview.css" />
+    <title>主页</title>
+</head>
+<body>
+    
+<div id="test-markdown-view" >
+    <!-- Server-side output Markdown text -->
+<!---	<img src="/favicon.ico" height="64px" width=64px" /> --->
+
+    <textarea style="display:none;">
+#QR CODE 临时页
+##### 寄
+
+------------
+
+###### *这里什么也没有*
+------------
+
+```python
+print("Tips:单击链接来跳转！")
+```
+**试着访问:**
+-  [主页](https://woshisb.eu.org/ "主页")
+
+######Last edited :2023-11-25 08:12:45
+------------
+by @woshimaniubi8 &copy;2023
+
+</textarea>             
+</div>
+<script src="//woshisb.eu.org/jquery.min.js"></script>
+<script src="//woshisb.eu.org/js/editormd.js"></script>
+<script src="//woshisb.eu.org/js/lib/marked.min.js"></script>
+<script src="//woshisb.eu.org/js/lib/prettify.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+	    var testView = editormd.markdownToHTML("test-markdown-view", {
+            // markdown : "[TOC]\n### Hello world!\n## Heading 2", // Also, you can dynamic set Markdown text
+             htmlDecode : true,  // Enable / disable HTML tag encode.
+            // htmlDecode : "style,script,iframe",  // Note: If enabled, you should filter some dangerous HTML tags for website security.
+        });
+    });
+</script>
+</body>
+</html>
