@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>地图</title>
+    <script type="text/javascript" src="http://api.tianditu.gov.cn/api?v=4.0&tk=1d55025e66467c1e0290dcc8c3b3c5b3"></script>
+  
+<script>
+        var map;
+        var zoom = 10;
+        function onLoad() {
+            map = new T.Map('mapDiv');
+            map.centerAndZoom(new T.LngLat(116.374139,39.952619), zoom);
+        }
+    </script>
+</head>
+<body onLoad="onLoad()">
+<h4>API : 天地图©   |  初始位置：116.37,39.95</h4>
+<div id="mapDiv" style="position:absolute;width:99%; height:92%">
+
+</div>
+</body>
+</html>
