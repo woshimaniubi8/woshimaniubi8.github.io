@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="js/css/editormd.preview.css" />
+    <title>主页</title>
+</head>
+<body>
+    
+<div id="test-markdown-view" >
+    <!-- Server-side output Markdown text -->
+	<img src="/favicon.ico" height="64px" width=64px" />
+
+    <textarea style="display:none;">### *UEG NFC卡片* の 二维码页面
+> *UEG 出自电影《流浪地球 2》，全称 `UNITED EARTH GOVERNMENT`
+
+* 卡片图样由 [uegov.world](http://uegov.world/ueg-card "uegov.world") 生成
+
+------
+正面：
+> 注:卡片可编辑部分不一定与下面的图片完全相同
+>* 卡片打印后可能经过裁剪
+>
+>* 此页面二维码覆盖了原有的二维码
+ 
+[![](https://woshisb.eu.org/Sources/ueg-card.jpg)](https://woshisb.eu.org/Sources/ueg-card.jpg)
+
+#### 背面可粘贴圆形的 `IC/ID` 等 NFC芯片及线圈 以达到NFC卡片的效果
+------
+**Update:2023-12-17 14:03:12**
+------------
+by @woshimaniubi8 &copy;2023
+
+</textarea>             
+</div>
+<script src="jquery.min.js"></script>
+<script src="js/editormd.js"></script>
+<script src="js/lib/marked.min.js"></script>
+<script src="js/lib/prettify.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+	    var testView = editormd.markdownToHTML("test-markdown-view", {
+            // markdown : "[TOC]\n### Hello world!\n## Heading 2", // Also, you can dynamic set Markdown text
+             htmlDecode : true,  // Enable / disable HTML tag encode.
+            // htmlDecode : "style,script,iframe",  // Note: If enabled, you should filter some dangerous HTML tags for website security.
+        });
+    });
+</script>
+</body>
+</html>
