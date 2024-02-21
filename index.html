@@ -54,7 +54,16 @@ by @woshimaniubi8 &copy;2022 - 2024
 </script>
 	
 <div>
-<iframe src="/comment.html"></iframe>
+<iframe id="bi_iframe" src="https://woshisb.eu.org/comment.html" onload="adjustIframe();" 
+        frameborder="0" scrolling="auto">
+</iframe>
+<script>
+function adjustIframe(){
+        var ifm= document.getElementById("bi_iframe");
+        ifm.height=document.documentElement.clientHeight;
+        ifm.width=document.documentElement.clientWidth;
+}
+</script>
 </div>
 </body>
 </html>
