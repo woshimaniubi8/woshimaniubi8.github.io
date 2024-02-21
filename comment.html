@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="js/gitalk.css">
+    <script src="js/gitalk.m.js"></script>
+    <title>Comments</title>
+</head>
+<body>
+<div id="gitalk-container"></div>
+    <script>
+    var gitalk = new Gitalk({
+        clientID: 'be7bea8a86072a7cacca', //clientID 
+        clientSecret: '6e6d0478478aed002f4a0d2f57df9e498fc94053', //clientSecret
+        repo: 'comm', // 仓库
+        owner: 'woshimaniubi8',
+        admin: ['woshimaniubi8'], //管理
+        id: location.pathname, 
+        language:'zh-CN', //语言
+        distractionFreeMode: true  // 无干扰模式
+    })
+    gitalk.render('gitalk-container')
+    </script>
+</body>
+</html>
